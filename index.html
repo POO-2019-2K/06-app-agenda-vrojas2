@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>El congreso</title>
+    <title>Agenda</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="agenda.css">
@@ -23,77 +23,42 @@
             <div class="col-3">
                 <form id="form" class="needs-validation" novalidate>
                     <div class="form-group">
-                        <label for="idTaller">Id del Taller</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="idTaller"
-                          placeholder="1"
-                          required
-                        />
-                        <div class="valid-feedback">Correcto</div>
-                        <div class="invalid-feedback">Incorrecto</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="tallerName">Nombre del taller</label>
+                        <label for="name">Nombre</label>
                         <input
                           type="text"
                           class="form-control"
-                          id="tallerName"
-                          placeholder="Avengers"
+                          id="name"
+                          placeholder="Juan Perez"
                           required
                           />
                         <div class="valid-feedback">Correcto</div>
                         <div class="invalid-feedback">Incorrecto</div>
                     </div>
                     <div class="form-group">
-                        <label for="initDate">Fecha de inicio</label>
+                        <label for="email">Correo</label>
                         <input
-                          type="date"
+                          type="email"
                           class="form-control"
-                          id="initDate"
+                          id="email"
+                          placeholder="vrojas2@ucol.mx"
                           required
                           />
                         <div class="valid-feedback">Correcto</div>
                         <div class="invalid-feedback">Incorrecto</div>
                     </div>
                     <div class="form-group">
-                        <label for="finDate">Fecha de término</label>
+                        <label for="birthday">Fecha de nacimiento</label>
                         <input
                           type="date"
                           class="form-control"
-                          id="finDate"
+                          id="birthday"
                           required
-                        />
-                        <div class="valid-feedback">Correcto</div>
-                        <div class="invalid-feedback">Incorrecto</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="placesDis">Lugares disponibles</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="placesDis"
-                          placeholder="20"
-                          required
-                        />
-                        <div class="valid-feedback">Correcto</div>
-                        <div class="invalid-feedback">Incorrecto</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="duracionTa">Duración en horas</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="duracionTa"
-                          placeholder="2 hrs"
-                          required
-                        />
+                          />
                         <div class="valid-feedback">Correcto</div>
                         <div class="invalid-feedback">Incorrecto</div>
                     </div>
                     <div class="row justify-content-center">
-                        <button id="btnAddTa" type="button" class="btn btn-primary" style="width: 90%">
+                        <button id="Add" type="button" class="btn btn-primary" style="width: 90%">
                             Agregar
                         </button>
                     </div>
@@ -103,14 +68,10 @@
                 <table id="regisTaller" class="table">
                     <tbody>
                         <tr>
-                            <th>ID</th>
-                            <th>Nombre del taller</th>
-                            <th>Fecha de inicio</th>
-                            <th>Fecha de término</th>
-                            <th>Cantidad de lugares</th>
-                            <th>Participantes registrados</th>
-                            <th>Duración (horas)</th>
-                            <th></th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>Edad</th>
                         </tr>
                     </tbody>
                 </table>
