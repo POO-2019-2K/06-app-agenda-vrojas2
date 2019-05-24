@@ -36,13 +36,13 @@ export default class Tabla {
         name: contacto.name,
         email: contacto.email,
         birthday: contacto.birthday,
-      }
+      };
       this._contactos.push(objContacto);
   }
 
   addContacto(contacto) {
     this._showInTable(contacto);
       localStorage.setItem("contactos", JSON.stringify(this._contactos));
-      console.log(localStorage.getItem("contactos"));
+      //console.log(localStorage.getItem("contactos"));
   }
 }
