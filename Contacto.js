@@ -1,8 +1,8 @@
 export default class Contacto {
-    constructor(employee) {
-      this._name = employee.name.toUpperCase();
-      this._birthday = employee.birthday;
-      this._email = employee.email;
+    constructor(contacto) {
+      this._name = contacto.name.toUpperCase();
+      this._birthday = contacto.birthday;
+      this._email = contacto.email;
       this._months = [
         "Ene", "Feb",
         "Mar", "Abr",
