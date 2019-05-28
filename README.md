@@ -4,6 +4,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/18feba3c4e5845af90e6eb5de5edf16c)](https://www.codacy.com/app/Grupo_2K/06-app-agenda-vrojas2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=POO-2019-2K/06-app-agenda-vrojas2&amp;utm_campaign=Badge_Grade)
 
+<a href="https://codebeat.co/projects/github-com-poo-2019-2k-06-app-agenda-vrojas2-master"><img alt="codebeat badge" src="https://codebeat.co/badges/1f1f4cf8-d009-4f71-b686-c130a64b1859" /></a>
+
 ## Tiempo para realizar la actividad
 
 6 Horas
