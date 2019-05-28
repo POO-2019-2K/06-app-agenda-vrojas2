@@ -2,6 +2,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e594999d28524bdeb099bafbfcc64f42)](https://www.codacy.com/app/vrojas2/06-app-agenda-vrojas2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=POO-2019-2K/06-app-agenda-vrojas2&amp;utm_campaign=Badge_Grade)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/18feba3c4e5845af90e6eb5de5edf16c)](https://www.codacy.com/app/Grupo_2K/06-app-agenda-vrojas2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=POO-2019-2K/06-app-agenda-vrojas2&amp;utm_campaign=Badge_Grade)
+
 ## Tiempo para realizar la actividad
 
 6 Horas
