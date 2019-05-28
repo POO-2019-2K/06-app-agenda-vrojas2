@@ -34,19 +34,21 @@ export default class Tabla {
     let found = this._repetEmail(contacto.email);
     if (found >=0) {
         swal.fire({
-            type: "error",
+            type: "Error",
             title: "Error",
             text: "Este email ya ha sido utilizado"
         });
         return;
-    }
-    swal.fire({
-      type: 'success',
-      title: 'Registrado',
+    } else{
+      swal.fire({
+        type: "Éxito",
+        title: "Éxito",
+        title: "Registrado",
       });
+    }
     this._showInTable(contacto);
-      localStorage.setItem("contactos", JSON.stringify(this._contactos));
-      //console.log(localStorage.getItem("contactos"));
+    localStorage.setItem("contactos", JSON.stringify(this._contactos));
+    //console.log(localStorage.getItem("contactos"));
   }
 
   _showInTable(contacto) {
@@ -68,7 +70,7 @@ export default class Tabla {
       email: contacto.email,
       birthday: contacto.birthday,
     };
-    
+
     this._contactos.push(objContacto);
     this._addButtons(row, contacto);
   }
