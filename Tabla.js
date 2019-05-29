@@ -33,19 +33,18 @@ export default class Tabla {
   addContacto(contacto) {
     let found = this._repetEmail(contacto.email);
     if (found >=0) {
-        swal.fire({
+        window.swal.fire({
             type: "error",
             title: "Error",
             text: "Este email ya ha sido utilizado"
         });
         return;
-    } else{
-      swal.fire({
+    }
+        window.swal.fire({
         type: "success",
         title: "Éxito",
         text: "Registrado",
       });
-    }
     this._showInTable(contacto);
     localStorage.setItem("contactos", JSON.stringify(this._contactos));
     //console.log(localStorage.getItem("contactos"));
@@ -60,10 +59,10 @@ export default class Tabla {
     let cellAge = row.insertCell(3);
     row.insertCell(4);
 
-    cellName.innerHTML = contacto.name;
-    cellEmail.innerHTML = contacto.email;
-    cellBirthday.innerHTML = contacto.getBirthdayAsString();
-    cellAge.innerHTML = contacto.getAge();
+    cellName.appendChild(document.createTextNode(contacto.name));
+    cellEmail.appendChild(document.createTextNode(contacto.email));
+    cellBirthday.appendChild(document.createTextNode(contacto.getBirthdayAsString()));
+    cellAge.appendChild(document.createTextNode(contacto.getAge()));
 
     let objContacto = {
       name: contacto.name,
@@ -97,5 +96,7 @@ export default class Tabla {
     location.reload();
     localStorage.setItem("contactos", JSON.stringify(this._contactos));
   }
+
+
 
 }
