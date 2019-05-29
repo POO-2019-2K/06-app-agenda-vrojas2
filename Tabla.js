@@ -43,7 +43,7 @@ export default class Tabla {
       swal.fire({
         type: "success",
         title: "Éxito",
-        title: "Registrado",
+        text: "Registrado",
       });
     }
     this._showInTable(contacto);

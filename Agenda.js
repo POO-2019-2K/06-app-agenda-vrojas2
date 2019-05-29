@@ -20,9 +20,9 @@ class Main {
             let birthday = new Date(sBirthday[0], sBirthday[1] - 1, sBirthday[2]);
 
             let objContacto = {
-                name: name,
-                email: email,
-                birthday: birthday
+                name,
+                email,
+                birthday
             };
             let contacto = new Contacto(objContacto);
             tabla.addContacto(contacto);
