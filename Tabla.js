@@ -34,14 +34,14 @@ export default class Tabla {
     let found = this._repetEmail(contacto.email);
     if (found >=0) {
         swal.fire({
-            type: "Error",
+            type: "error",
             title: "Error",
             text: "Este email ya ha sido utilizado"
         });
         return;
     } else{
       swal.fire({
-        type: "Éxito",
+        type: "success",
         title: "Éxito",
         title: "Registrado",
       });
@@ -74,22 +74,28 @@ export default class Tabla {
     this._contactos.push(objContacto);
     this._addButtons(row, contacto);
   }
-
-  _deleteRow(row, contacto){
-    this._contactos.splice(contacto, 1);
-    row.innerHTML = ""; 
-    localStorage.setItem("Contacts", JSON.stringify(this._contactos));
-    return;  
-  }
   
   _addButtons(row, contacto){ 
     let btnDelete = document.createElement("input");
     btnDelete.type = "button";
     btnDelete.value = "Borrar";
+    row.cells[4].innerHTML = ""; 
     btnDelete.className = "btnDelet";
     row.cells[4].appendChild(btnDelete);
     btnDelete.addEventListener("click", () => { 
-      this._deleteRow(row, contacto);
+      this._deleteRow(contacto);
     }); 
   }
+
+  _deleteRow(contacto){
+    this._contactos = JSON.parse(localStorage.getItem("contactos"));
+    this._contactos.forEach((e, index) => {
+      if(e.email === contacto.email) {
+        this._contactos.splice(index, 1);
+      }
+    });
+    location.reload();
+    localStorage.setItem("contactos", JSON.stringify(this._contactos));
+  }
+
 }
