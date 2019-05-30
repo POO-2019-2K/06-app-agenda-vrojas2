@@ -71,10 +71,10 @@ export default class Tabla {
     };
 
     this._contactos.push(objContacto);
-    this._addButtons(row, contacto);
+    this._addDeleteBtn(row, contacto);
   }
   
-  _addButtons(row, contacto){ 
+  _addDeleteBtn(row, contacto){ 
     let btnDelete = document.createElement("input");
     btnDelete.type = "button";
     btnDelete.value = "Borrar";
@@ -97,6 +97,21 @@ export default class Tabla {
     localStorage.setItem("contactos", JSON.stringify(this._contactos));
   }
 
+  _compAlpha(a, b) {
+    if (a.name < b.name) {
+      return -1;
+    }
 
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  }
+
+  showAlpha() {
+    this._contactos.sort(this._compAlpha);
+    location.reload();
+    localStorage.setItem("contactos", JSON.stringify(this._contactos));
+  }
 
 }

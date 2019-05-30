@@ -28,7 +28,13 @@ class Main {
             tabla.addContacto(contacto);
         }   
     });
+
+    document.querySelector("#buttonAlpha").addEventListener("click",() => {
+      tabla.showAlpha();
+    });
+
   }
+
 }
 
 let m = new Main();
