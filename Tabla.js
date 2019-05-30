@@ -97,12 +97,12 @@ export default class Tabla {
     localStorage.setItem("contactos", JSON.stringify(this._contactos));
   }
 
-  _compAlpha(a, b) {
-    if (a.name < b.name) {
+  _compAlpha(x, y) {
+    if (x.name < y.name) {
       return -1;
     }
 
-    if (a.name > b.name) {
+    if (x.name > y.name) {
       return 1;
     }
     return 0;
@@ -110,6 +110,23 @@ export default class Tabla {
 
   showAlpha() {
     this._contactos.sort(this._compAlpha);
+    location.reload();
+    localStorage.setItem("contactos", JSON.stringify(this._contactos));
+  }
+
+  _compAge(x, y) {
+    if (x.birthday > y.birthday) {
+      return -1;
+    }
+
+    if (x.birthday < y.birthday) {
+      return 1;
+    }
+    return 0;
+  }
+
+  showAge() {
+    this._contactos.sort(this._compAge);
     location.reload();
     localStorage.setItem("contactos", JSON.stringify(this._contactos));
   }

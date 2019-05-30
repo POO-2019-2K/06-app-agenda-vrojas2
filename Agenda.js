@@ -33,6 +33,10 @@ class Main {
       tabla.showAlpha();
     });
 
+    document.querySelector("#buttonAge").addEventListener("click", () => {
+      tabla.showAge();
+    });
+
   }
 
 }
